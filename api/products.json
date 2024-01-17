@@ -1,0 +1,20 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "tarea": "Tarea 1",
+      "notas": "1",
+      "completada": false,
+      "eliminada": true,
+      "usuario": "1"
+    },
+    {
+      "id": 2,
+      "tarea": "Tareas 2",
+      "notas": "",
+      "completada": false,
+      "eliminada": false,
+      "usuario": "1"
+    }
+  ]
+}
