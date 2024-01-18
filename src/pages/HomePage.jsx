@@ -18,17 +18,7 @@ const HomePage = () => {
             })
         }
         </>
-    // <div className="container">
-    //     <h1 className="diplay-1">Artículos Selva Urbana</h1>
-    //     <p>Plantas para todos los gustos</p>
-    //         <AddButton/>
-    //     <div className='container-card'>
-    //         <CardProduct/>
-    //     </div>
-    // </div>
-    
-
-    )
+        )
 }
 // productService.getProducts();
 
