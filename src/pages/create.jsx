@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-function App() {
-  const [usuarios, setUsuarios] = useState([]);
+
+//
+//function App() {
+ const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {

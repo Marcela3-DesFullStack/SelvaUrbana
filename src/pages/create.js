@@ -1,14 +1,26 @@
+let array = [];
 function leerValoresUsuarios() {
     return new Promise(async (resolve) => {
-        let array [];
         try {
-            const response = await fetch('/src/json/db.json');
+            const response = await fetch('/api/products.json');
             const responseData = await response.json();
-            array = [...responseData.tareas];
+            array = [...responseData.products];
             console.log(array);
-        
+        console.log(array[0].name);
         } catch (error) {
         console.log(error);
       }
     })
+  } 
+  function  insertData() {
+    array.map()
+      return (
+        <div>
+          <input className="name" placeholder="Nombre de la Planta"></input>
+        </div>
+      )
+
+
+
+
   }
