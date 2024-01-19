@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "products": [
     {
       "id": 1,
@@ -21,5 +22,29 @@
     }
 
 
+=======
+  "products": [
+    {
+      "id": "1",
+      "name": "Epipremum aureum",
+      "photo": "/src/assets/img/epipremnum-aureum.jpg",
+      "type": "Interior",
+      "stock items": "10",
+      "price": "12",
+      "description": "Prefiere zonas bien iluminadas, pero sin sol directo. Esta bien adaptada a los ambientes templados de la casa, pero es sensible a los cambios bruscos de temperatura y a las zonas con corrientes de aire. El riego debe ser abundante de primavera a atoño, disminuyendo la frecuencia en invierno."
+    },
+    {
+      "id": "2",
+      "name": "Sansevieria",
+      "photo": "/src/assets/img/sansevieria.webp",
+      "type": "Interior",
+      "stock items": "8",
+      "price": "9",
+      "description": "Esta planta, ubicada en este espacio clave de la casa, se convertirá en un talismán de la buena suerte y además actuará como filtro energético ahuyentando las energías negativas que pueden ingresar desde afuera."
+    },
+    {
+      "id": "fde9"
+    }
+>>>>>>> 27dd938dacf49a4f21b0cfa2d0f1954ed315532b
   ]
 }
