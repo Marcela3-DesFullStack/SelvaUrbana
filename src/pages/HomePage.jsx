@@ -2,6 +2,7 @@ import React from 'react';
 import AddButton from "../components/AddButton";
 import productService from "../services/productService";
 import { useState } from "react";
+import MyComponent from '../components/BotonMaterial';
 
 const HomePage = () => {
     const [products, setProducts] = useState([]);
@@ -17,7 +18,10 @@ const HomePage = () => {
                 return <h1>{product.name}</h1>
             })
         }
+        <MyComponent />
+        <AddButton />
         </>
+        
         )
 }
 // productService.getProducts();
