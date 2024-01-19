@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Epipremum aureum",
-      "photo":"/src/assets/img/epipremnum-aureum.jpg",
+      "photo":"/src/img/epipremnum-aureum.jpg",
       "type": "Interior",
 
       "stock":"10",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "name": "Sansevieria",
-      "photo":"/src/assets/img/sansevieria.webp",
+      "photo":"/src/img/sansevieria.webp",
       "type": "Interior",
       "stock":"8",
       "price" : "9",
