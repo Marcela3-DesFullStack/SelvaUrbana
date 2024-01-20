@@ -1,19 +1,11 @@
-import AddButton from "../components/AddButton";
 import productService from "../services/productService";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCubes } from "@fortawesome/free-solid-svg-icons"
-import { faSeedling } from "@fortawesome/free-solid-svg-icons"
-import { faTrashCan} from "@fortawesome/free-solid-svg-icons"
-import { faPenToSquare} from "@fortawesome/free-solid-svg-icons"
-import { faEye} from "@fortawesome/free-solid-svg-icons"
+import { faCubes, faSeedling, faTrashCan, faPenToSquare, faEye, faSquarePlus } from "@fortawesome/free-solid-svg-icons"
 import App from "../App";
-import Header from "./Header";
-import { StyledViewButton, StyledDeleteButton , StyledEditButton } from "../components/StyledButton";
-import StyledCard from "../components/StyledCard";
-
-
-
+import StyledPageHeader from "../components/StylePageHeader";
+import { StyledViewButton, StyledDeleteButton , StyledEditButton, StyledAddButton } from "../components/StyledButton";
+import ProductStyledCard from "../components/ProductStyledCard";
 
 
 const HomePage = () => {
@@ -29,15 +21,16 @@ const HomePage = () => {
     }
     return ( 
         <>
-            <h2 className="display-5">Plantas para todos los gustos</h2>
-                <AddButton />  
+            <StyledPageHeader>
+                <p>Plantas para todos los gustos</p>
+                <StyledAddButton><FontAwesomeIcon icon={faSquarePlus} /> Añadir Planta</StyledAddButton>
 
-            <StyledCard className="container-card">
+            </StyledPageHeader> 
 
-                {products.map((product, index) => (
-                                              
-                        
-                    <div key={product.index}>
+            {products.map((product, index) => (
+                 
+    
+                    <ProductStyledCard key={product.index}>
                         <img src={product.photo} alt={product.name} width="120" height="120"/>
                         <h2 className="display-1">{product.name}</h2>
                         <h3><FontAwesomeIcon icon={faSeedling} />{product.type}</h3>
@@ -50,16 +43,11 @@ const HomePage = () => {
                             <StyledEditButton><FontAwesomeIcon icon={faPenToSquare} /> Editar</StyledEditButton>
                             <StyledDeleteButton><FontAwesomeIcon icon={faTrashCan} /> Borrar</StyledDeleteButton>
                         </>
-                    </div>
-
+                    </ProductStyledCard>
                 
-                        
-                ))}
-                
-                
+                                        
+            ))}
 
-
-            </StyledCard>
             
         </>
     )

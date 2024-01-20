@@ -28,6 +28,15 @@ const StyledDeleteButton = styled.button`
   cursor: pointer;
 `;
 
+const StyledAddButton = styled.button`
+  background-color: #49c351;
+  color: azure;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+`;
 
-
-export { StyledViewButton, StyledDeleteButton , StyledEditButton };
+export { StyledViewButton, StyledDeleteButton , StyledEditButton, StyledAddButton };
