@@ -1,10 +1,11 @@
-import React from "react"
-import '../components/Button.css';
+import React from 'react';
+
+
 
 const ViewButton = () => {
-  return (
-      <button className="view-button"> <i className="fa-solid fa-eye"></i> Ver ítem</button>
-  )
+    return (
+        <button className='view-button'><i className="fa-solid fa-trash-can"></i> Ver ítem</button>
+    )
 }
 
 export default ViewButton

@@ -1,12 +1,11 @@
-
 import AddButton from "../components/AddButton";
 import productService from "../services/productService";
 import { useEffect, useState } from "react";
 import App from "../App";
 import Header from "./Header";
-import EditButton from "../components/EditButton";
-import ViewButton from "../components/ViewButton";
-import DeleteButton from "../components/DeleteButton";
+import { StyledViewButton, StyledDeleteButton , StyledEditButton } from "../components/StyledButton";
+
+
 
 
 
@@ -40,9 +39,10 @@ const HomePage = () => {
                         <h3>Stock: {product.stock} und</h3>
                            
                         <>
-                            <EditButton/> 
-                            <ViewButton/>
-                            <DeleteButton/>
+                             
+                            <StyledViewButton><i class="fa-solid fa-eye"></i> Ver</StyledViewButton>
+                            <StyledEditButton><i className="fa-solid fa-pen-fancy"></i> Editar</StyledEditButton>
+                            <StyledDeleteButton><i className="fa-solid fa-trash-can"></i> Borrar</StyledDeleteButton>
                         </>
                     </div>
 
