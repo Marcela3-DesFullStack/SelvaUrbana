@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import ViewButton from "./ViewButton";
-import DeleteButton from "./DeleteButton";
-import EditButton from "./EditButton";
 
 
 const StyledViewButton = styled.button`
