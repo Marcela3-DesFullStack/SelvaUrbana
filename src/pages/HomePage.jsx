@@ -27,27 +27,35 @@ const HomePage = () => {
 
             </StyledPageHeader> 
 
-            {products.map((product, index) => (
+            
+            <div className="card-container">
+                {products.map((product, index) => (
                  
     
                     <ProductStyledCard key={product.index}>
-                        <img src={product.photo} alt={product.name} width="120" height="120"/>
-                        <h2 className="display-1">{product.name}</h2>
-                        <h3><FontAwesomeIcon icon={faSeedling} />{product.type}</h3>
-                        <h3>${product.price}</h3>
-                        <p><FontAwesomeIcon icon={faCubes} /> {product.stock} und</p>
-                           
-                        <>
+                        <div className="title-card">
+                            <p>{product.name}</p>
+                            
+                        </div>
+                        <div className="information-card">
+                            <img src={product.photo} alt={product.name} />
+                            <div>
+                                <p><FontAwesomeIcon icon={faSeedling} />{product.type}</p>
+                                <p>${product.price}</p>
+                                <p><FontAwesomeIcon icon={faCubes} /> {product.stock} und</p>
+                            </div>
+                        </div>
+                         <div className="button-container">
                              
                             <StyledViewButton><FontAwesomeIcon icon={faEye} /> Ver</StyledViewButton>
                             <StyledEditButton><FontAwesomeIcon icon={faPenToSquare} /> Editar</StyledEditButton>
                             <StyledDeleteButton><FontAwesomeIcon icon={faTrashCan} /> Borrar</StyledDeleteButton>
-                        </>
+                        </div>
                     </ProductStyledCard>
                 
                                         
-            ))}
-
+                 ))}
+            </div>
             
         </>
     )
