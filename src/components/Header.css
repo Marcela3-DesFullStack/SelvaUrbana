@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;1,6..12,900&display=swap');
+
+.header {
+    height:100px;
+    background-color: #009929;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  
+
+}
+.header img {
+    height:auto;
+    width: auto;
+}
+
+.header h1 {
+    width:420px;
+    font-size: 40px;
+    color:#d5e741;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}

@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&family=Nunito+Sans:ital,opsz,wght@0,6..12,600;1,6..12,900&display=swap');
+
 #root {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  
+}
+
+body {  
+    margin: 0;
+    height: 100vh;
+    font-family: 'Nunito Sans', sans-serif;
+
 }

@@ -7,6 +7,8 @@ import App from "../App";
 import StyledPageHeader from "../components/StylePageHeader";
 import { StyledViewButton, StyledDeleteButton , StyledEditButton, StyledAddButton } from "../components/StyledButton";
 import ProductStyledCard from "../components/ProductStyledCard";
+import StyledCardContainer from "../components/StyledCardContainer";
+
 
 
 const HomePage = () => {
@@ -28,8 +30,10 @@ const HomePage = () => {
     }
 
 
-    return ( 
+    return (
+
         <>
+
             <StyledPageHeader>
                 <p>Plantas para todos los gustos</p>
                 <StyledAddButton><FontAwesomeIcon icon={faSquarePlus} /> Añadir Planta</StyledAddButton>
@@ -37,7 +41,7 @@ const HomePage = () => {
             </StyledPageHeader> 
 
             
-            <div className="card-container">
+            <StyledCardContainer div className="card-container">
                 {products.map((product, index) => (
                  
     
@@ -64,7 +68,7 @@ const HomePage = () => {
                 
                                         
                  ))}
-            </div>
+            </StyledCardContainer>
             
         </>
     )

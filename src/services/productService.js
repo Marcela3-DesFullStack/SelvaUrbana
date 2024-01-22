@@ -26,6 +26,7 @@ const productService = {
           } catch (error) {
             console.error("Error al eliminar el producto", error);
           }
+          deleteProducts()
         },
     
     async updateProduct () {
