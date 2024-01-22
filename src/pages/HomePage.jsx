@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCubes, faSeedling, faTrashCan, faPenToSquare, faEye, faSquarePlus } from "@fortawesome/free-solid-svg-icons"
 import App from "../App";
+
 import StyledPageHeader from "../components/StylePageHeader";
 import { StyledViewButton, StyledDeleteButton , StyledEditButton, StyledAddButton } from "../components/StyledButton";
 import ProductStyledCard from "../components/ProductStyledCard";
@@ -13,12 +14,20 @@ const HomePage = () => {
 
     useEffect (() => {
         getProducts();
+        
     }, []);
 
     async function getProducts() {
         let data = await productService.getProducts();
         setProducts(data);
     }
+    async function deleteProduct(Id) {
+        let data = await productService.deleteProduct(Id);
+        setProducts(data);
+        console.log(data);
+    }
+
+
     return ( 
         <>
             <StyledPageHeader>
@@ -49,7 +58,7 @@ const HomePage = () => {
                              
                             <StyledViewButton><FontAwesomeIcon icon={faEye} /> Ver</StyledViewButton>
                             <StyledEditButton><FontAwesomeIcon icon={faPenToSquare} /> Editar</StyledEditButton>
-                            <StyledDeleteButton><FontAwesomeIcon icon={faTrashCan} /> Borrar</StyledDeleteButton>
+                            <StyledDeleteButton onClick={() => deleteProduct(1)}><FontAwesomeIcon icon={faTrashCan} /> Borrar</StyledDeleteButton>
                         </div>
                     </ProductStyledCard>
                 
