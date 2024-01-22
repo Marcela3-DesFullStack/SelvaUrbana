@@ -1,5 +1,4 @@
 import React from 'react'
-// import image1 from '../assets/image-1.jpg'
 import ModalWindow from './ModalWindow';
 import EditButton from './EditButton';
 import DeleteButton from './DeleteButton';
