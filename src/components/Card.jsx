@@ -4,6 +4,7 @@ import EditButton from './EditButton';
 import DeleteButton from './DeleteButton';
 import productService from '../services/productService';
 
+
 export default function CardProduct() {
     const [products, setProducts] = useState({})
 
@@ -12,13 +13,13 @@ export default function CardProduct() {
     }, [])
 
     async function getData() {
-        setProducts(productService.getProducts())
+        setProducts(await productService.getProducts())
     }
 
     return (
 <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img className="rounded-t-sm" src= "../src/assets/image-1.jpg" alt="imagen" />
+        <img className="rounded-t-sm" src={products.length > 0 && products[0].photo} alt="imagen" />
     </a>
     <div className="p-0">
         <a href="#">
@@ -27,8 +28,7 @@ export default function CardProduct() {
             </h5>
         </a>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {products.length > 0 && products[0].description}
-            {products.length > 0 && products[0].name}
+            {products.length > 0 && products[0].type}
         </p>
         
         <div className="flex gap-2 items-center justify-between">
@@ -41,4 +41,3 @@ export default function CardProduct() {
 </div>
  )
 }
-
