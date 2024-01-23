@@ -18,10 +18,6 @@ const App = () => {
   return (
     <>
       <CardProduct/>
-      {/* <ModalWindow /> */}
-      {modalAbierto && (
-        <ModalWindow onClose={cerrarModal} />
-      )}
     </>
   );
 };
