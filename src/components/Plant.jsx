@@ -1,20 +1,10 @@
 import {useNavigate} from "react-router-dom"
 import { Link } from 'react-router-dom'
-import { useParams } from "react-router-dom";
 
 const Plant = ({plants}) => {
     
-    const navigate = useNavigate();
+    
 
-    const {id} = useParams();
-    const handleClick = ()=> {
-        fetch('http://localhost:3001/products/'+ id,{
-            method: 'DELETE'
-        })
-        .then(() => {
-            navigate('./')
-        })
-    }
     return (
         <div className='plant-list'>
             {plants.map((plant) => (

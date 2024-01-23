@@ -10,6 +10,7 @@ const Create = () => {
     const [stock, setStock] = useState(0);
     const [description, setDescription] = useState('');
     const [type, setType] = useState('indoor');
+    const [photo, setPhoto]= useState()
     const [isPending, setIsPending] = useState(false)
     const navigate = useNavigate()
 
@@ -33,13 +34,6 @@ const Create = () => {
         })
     }
 
-    
-
-   
-
-
-
-
     return (
         <div className="create">
             <h2>add a new plant</h2>
@@ -49,13 +43,11 @@ const Create = () => {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                /><div>
+                />
+                <div className="photoContainer">
                      <h1>Image Uploader</h1>
                         <ImageUploader />
                 </div>
-
-
-
 
                 <label>price</label>
                 <input type="text" 

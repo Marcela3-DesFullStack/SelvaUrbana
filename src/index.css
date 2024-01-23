@@ -107,6 +107,15 @@ footer p {
   font-size: 9px;
   padding: 4px;
 }
+.deleteBtn {
+  background-color: #d5e741;
+  border-radius: 30px;
+  margin: 5px;
+  border: 2px solid #009929;
+  font-size: 9px;
+  padding: 4px;
+  width: 30px;
+}
 .buttonContainer {
   display: flex;
   justify-content: space-evenly;
@@ -191,10 +200,4 @@ footer p {
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
-}
-photoContainer {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-
 }
