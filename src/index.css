@@ -192,3 +192,9 @@ footer p {
   border-radius: 8px;
   cursor: pointer;
 }
+photoContainer {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+
+}

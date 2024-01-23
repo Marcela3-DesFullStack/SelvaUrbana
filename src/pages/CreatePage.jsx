@@ -1,5 +1,8 @@
 import { useState } from "react";
 import {useNavigate} from "react-router-dom"
+import ImageUploader from '../components/ImageUploader';
+
+
 
 const Create = () => {
     const [name, setName] = useState('');
@@ -30,6 +33,13 @@ const Create = () => {
         })
     }
 
+    
+
+   
+
+
+
+
     return (
         <div className="create">
             <h2>add a new plant</h2>
@@ -39,7 +49,14 @@ const Create = () => {
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                />
+                /><div>
+                     <h1>Image Uploader</h1>
+                        <ImageUploader />
+                </div>
+
+
+
+
                 <label>price</label>
                 <input type="text" 
                     required
@@ -64,8 +81,8 @@ const Create = () => {
                     value={type}
                     onChange={(e) => setType(e.target.value)}
                 >
-                    <option value="indoor">indoor</option>
-                    <option value="outdoor">outdoor</option>
+                    <option value="/icons/indoor_icon.svg">indoor</option>
+                    <option value="/icons/outdoor_icon.svg">outdoor</option>
                 </select>
                 {!isPending && <button>add plant</button>}
                 {isPending && <button disabled >adding plant...</button>}

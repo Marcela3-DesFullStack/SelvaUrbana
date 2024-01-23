@@ -50,6 +50,30 @@
       "stock": "50",
       "description": "Red Tulip",
       "type": "indoor"
+    },
+    {
+      "id": "5a2e",
+      "name": "hyacinth",
+      "price": "12",
+      "stock": "20",
+      "description": "Blue",
+      "type": "outdoor"
+    },
+    {
+      "id": "2aea",
+      "name": "Rose",
+      "price": "12",
+      "stock": "23",
+      "description": "Red Rose",
+      "type": "/icons/outdoor_icon.svg"
+    },
+    {
+      "id": "2de0",
+      "name": "Paolo",
+      "price": "14",
+      "stock": "1",
+      "description": "Unique person",
+      "type": "indoor"
     }
   ]
 }
