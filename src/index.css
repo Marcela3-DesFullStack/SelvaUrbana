@@ -69,9 +69,15 @@ footer p {
   flex-wrap: wrap;
 }
 
+.plant-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .card {
   width: 140px;
-  height: 160px;
+  height: 200px;
   background-color: #f3f2f2;
   border: 3.5px solid #d5e741;
   border-radius: 15px;
@@ -93,9 +99,7 @@ footer p {
   font-size: 9px;
   padding: 4px;
 }
-.deleteBtn {
-  position: absolute;
-  bottom: -40px;
+.actionBtn {
   background-color: #d5e741;
   border-radius: 30px;
   margin: 5px;
@@ -103,11 +107,11 @@ footer p {
   font-size: 9px;
   padding: 4px;
 }
-#buttonContainer {
-  position: absolute;
-  bottom: -40px;
+.buttonContainer {
   display: flex;
   justify-content: space-evenly;
+  position: absolute;
+  bottom: 3px;
 }
 .plantImg {
   width: 90px;
@@ -133,7 +137,7 @@ footer p {
 }
 .price {
   position: absolute;
-  bottom: 5px;
+  bottom: 40px;
   left: 40px;
   font-size: 14px;
   color: black;
