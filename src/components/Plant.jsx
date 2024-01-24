@@ -6,7 +6,12 @@ const Plant = ({plants}) => {
     
     const navigate = useNavigate();
 
+    async function handleEdit(id) {
+        
+    }
+
     async function handleDelete (id) {
+        
         try {
             console.log('Deleting plant with ID:', id);
             const response = await fetch('http://localhost:3001/products/'+ id, {
@@ -39,7 +44,7 @@ const Plant = ({plants}) => {
                         <Link to={plant.id}>
                         <button className='actionBtn'>Ver</button>
                         </Link>
-                        <button className='actionBtn'>Editar</button>
+                        <button className='actionBtn' onClick={() => handleEdit(plant.id)}>Editar</button>
                         <button className='actionBtn' onClick={() => handleDelete(plant.id)}>Borrar</button>
                     </div>
 
