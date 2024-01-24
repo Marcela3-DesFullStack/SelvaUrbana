@@ -12,6 +12,13 @@ async getProducts () {
         return data;
 },
 
+async showProduct (id) {
+    let response = await fetch("http://localhost:3000/products/" + id);
+    let data = await response.json()
+    console.log('Datos a mostrar: ' + data);
+    return data;
+},
+
 async createProduct () {
     console.log ('Hola');
 },

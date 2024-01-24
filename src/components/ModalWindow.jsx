@@ -1,7 +1,20 @@
 import React from "react";
 
-export default function Modal() {
+export default function Modal(props) {
+  
   const [showModal, setShowModal] = React.useState(false);
+  console.log('Props: ' + props.productId);
+  let id = props.productId;
+
+  async function getData() {
+    setProducts(await productService.showProduct(id))
+}
+  
+useEffect(() => {
+    getData()
+}, [])
+
+
   return (
     <>
       <button
@@ -24,7 +37,7 @@ export default function Modal() {
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
                   <h3 className="text-3xl font-semibold">
-                   Título del artículo
+                   Nombre del artículo
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -36,13 +49,21 @@ export default function Modal() {
                   </button>
                 </div>
                 {/*body*/}
+                <div className="relative p-4 flex-auto">
+                  <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
+                    Descripción del artículo could do anything. That’s the main
+                    thing people are controlled by! Thoughts- their perception
+                    of themselves! They're slowed down by their perception of.
+                  </p>
+                </div>
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down by their perception of
-                    themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
+                    Stock artículo
+                  </p>
+                </div>
+                <div className="relative p-6 flex-auto">
+                  <p className="my-4 text-blueGray-500 text-lg leading-relaxed">
+                   Precio artículo
                   </p>
                 </div>
                 {/*footer*/}

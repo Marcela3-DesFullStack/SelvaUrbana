@@ -4,7 +4,6 @@ import EditButton from './EditButton';
 import DeleteButton from './DeleteButton';
 import productService from '../services/productService';
 
-
 export default function CardProduct() {
     const [products, setProducts] = useState({})
 
@@ -36,7 +35,7 @@ export default function CardProduct() {
         </p>
 
         <div className="flex gap-2 items-center justify-between">
-            <ModalWindow />
+            <ModalWindow productId={1}/>
             <EditButton />
             <DeleteButton />
         </div>
