@@ -1,4 +1,6 @@
-import React from "react";
+// import React from "react";
+import React, { useState, useEffect } from 'react';
+import productService from '../services/productService';
 
 export default function Modal(props) {
   
@@ -7,9 +9,11 @@ export default function Modal(props) {
   let id = props.productId;
 
   async function getData() {
-    setProducts(await productService.showProduct(id))
+    setProduct(await productService.showProduct(id))
 }
-  
+
+const [product, setProduct] = useState({})
+
 useEffect(() => {
     getData()
 }, [])
@@ -37,7 +41,7 @@ useEffect(() => {
                 {/*header*/}
                 <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
                   <h3 className="text-3xl font-semibold">
-                   Nombre del artículo
+                   Nombre del artículo {product.name}
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
