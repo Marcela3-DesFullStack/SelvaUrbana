@@ -9,7 +9,7 @@ const Create = () => {
     const [price, setPrice] = useState(0);
     const [stock, setStock] = useState(0);
     const [description, setDescription] = useState('');
-    const [type, setType] = useState('indoor');
+    const [type, setType] = useState("/icons/indoor_icon.svg");
     const [photo, setPhoto]= useState()
     const [isPending, setIsPending] = useState(false)
     const navigate = useNavigate()
@@ -78,6 +78,7 @@ const Create = () => {
                 </select>
                 {!isPending && <button>add plant</button>}
                 {isPending && <button disabled >adding plant...</button>}
+                <button>edit plant</button>
             </form>
         </div>
      );

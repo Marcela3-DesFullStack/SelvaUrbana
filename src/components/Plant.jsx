@@ -1,10 +1,9 @@
-import {useNavigate} from "react-router-dom"
 import { Link } from 'react-router-dom'
 
 const Plant = ({plants}) => {
     
-    
 
+    
     return (
         <div className='plant-list'>
             {plants.map((plant) => (
@@ -17,7 +16,9 @@ const Plant = ({plants}) => {
                         <Link to={plant.id}>
                         <button className='actionBtn'>view</button>
                         </Link>
+                        <Link to={'/edit'}>
                         <button className='actionBtn'>edit</button>
+                        </Link>
                         <button className='actionBtn'>delete</button>
                     </div>
 
@@ -27,6 +28,7 @@ const Plant = ({plants}) => {
              
                 </div>
             ))}
+            
         </div>
     );  
 }

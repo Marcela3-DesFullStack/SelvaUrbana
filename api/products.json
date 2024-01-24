@@ -1,3 +1,12 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "1da0",
+      "name": "Sanseveria",
+      "price": "10",
+      "stock": "5",
+      "description": "blue",
+      "type": "/icons/outdoor_icon.svg"
+    }
+  ]
 }
