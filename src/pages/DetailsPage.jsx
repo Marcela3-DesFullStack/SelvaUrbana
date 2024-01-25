@@ -15,7 +15,7 @@ const Details = () => {
                 <>
                     <div className="details_container">
                     <header>
-                        <img src={Logo} alt="" id="logo"/>
+                        <img className="logo" src={Logo} alt="" id="logo"/>
                         <h1>Selva Urbana</h1>
                     
                     </header>
