@@ -2,13 +2,18 @@ import {useNavigate} from "react-router-dom"
 import { Link } from 'react-router-dom'
 
 
+
 const Plant = ({plants}) => {
     
     const navigate = useNavigate();
 
-    async function handleEdit(id) {
-        
+   async function handleEdit(id) {
+        // Your edit logic goes here
+        console.log('Editing plant with ID:', id);
+        // Add your edit logic, for example, navigate to the edit page with the plant ID
+        navigate(`/edit/${id}`);
     }
+
 
     async function handleDelete (id) {
         
@@ -42,9 +47,12 @@ const Plant = ({plants}) => {
                     </Link>
                     <div className="buttonContainer">
                         <Link to={plant.id}>
-                        <button className='actionBtn'>Ver</button>
+                            <button className='actionBtn'>Ver</button>
                         </Link>
+                        
                         <button className='actionBtn' onClick={() => handleEdit(plant.id)}>Editar</button>
+                        
+                        
                         <button className='actionBtn' onClick={() => handleDelete(plant.id)}>Borrar</button>
                     </div>
 

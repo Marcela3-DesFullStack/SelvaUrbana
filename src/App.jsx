@@ -1,7 +1,7 @@
 import Create from './pages/CreatePage'
 import Details from './pages/DetailsPage'
 import Products from './pages/ProductsPage'
-import Plant from './components/Plant'
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 

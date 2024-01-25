@@ -10,7 +10,7 @@ const Create = () => {
     const [isPending, setIsPending] = useState(false)
     const navigate = useNavigate()
 
-    //"photo":"/photos/Costilla.webp",
+    
 
     const handleSubmit = (e) => {
         e.preventDefault()
