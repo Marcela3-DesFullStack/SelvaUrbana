@@ -7,12 +7,37 @@ const Plant = ({plants}) => {
     
     const navigate = useNavigate();
 
-   async function handleEdit(id) {
-        // Your edit logic goes here
-        console.log('Editing plant with ID:', id);
-        // Add your edit logic, for example, navigate to the edit page with the plant ID
-        navigate(`/edit/${id}`);
-    }
+    
+    const handleEdit = async (id) => {
+        
+            try {
+                console.log('Fetching plant data for editing with ID:', id);
+                const response = await fetch(`http://localhost:3001/products/` + id, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+    
+                if (response.ok) {
+                    const plantData = await response.json();
+                    console.log('Plant data fetched successfully:', plantData);
+                    
+                    navigate(`/update/${id}`, { state: { plantData } });
+    
+    
+                } else {
+                    console.error(`Error fetching plant data for ID ${id}`);
+                }
+            } catch (error) {
+                console.error("Error fetching plant data:", error);
+            }
+        };
+        
+
+    
+
+          
+      
+
 
 
     async function handleDelete (id) {
@@ -36,6 +61,8 @@ const Plant = ({plants}) => {
           console.error("Error deleting plant:", error);
         }
       };
+      
+    
     
       return (
         <div className='plant-list'>
@@ -49,9 +76,12 @@ const Plant = ({plants}) => {
                         <Link to={plant.id}>
                             <button className='actionBtn'>Ver</button>
                         </Link>
-                        
-                        <button className='actionBtn' onClick={() => handleEdit(plant.id)}>Editar</button>
-                        
+                                                
+                        <button className='actionBtn' onClick={() => {
+                handleEdit(plant.id);
+                history.push('/update/${id}', { state: { plantData } });
+              }}>Editar</button>
+                                                                     
                         
                         <button className='actionBtn' onClick={() => handleDelete(plant.id)}>Borrar</button>
                     </div>
@@ -64,6 +94,6 @@ const Plant = ({plants}) => {
             ))}
         </div>
     );
-}
- 
-export default Plant;
+
+} 
+export default Plant

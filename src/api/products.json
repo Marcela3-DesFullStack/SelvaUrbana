@@ -8,6 +8,14 @@
       "stock": "8",
       "price": "9",
       "description": "Esta planta, ubicada en este espacio clave de la casa, se convertirá en un talismán de la buena suerte y además actuará como filtro energético ahuyentando las energías negativas que pueden ingresar desde afuera."
+    },
+    {
+      "id": "671b",
+      "name": "klllklk",
+      "price": "45",
+      "stock": "02",
+      "description": "222",
+      "type": "indoor"
     }
   ]
 }
