@@ -16,14 +16,14 @@ export default function CardProduct() {
     }
 
     return (
-<div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div className="max-w-xs bg-white border border-dark-500 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
         <img className="rounded-t-sm w-64 h-64" src={products.length > 0 && products[0].photo} alt="imagen" />
     </a>
     <div className="p-0">
         <a href="#">
             <h5 className="mb-2 text-2l font-bold tracking-tight text-gray-900 dark:text-white">
-                Artículo: {products.length > 0 && products[0].name}
+                {products.length > 0 && products[0].name}
             </h5>
         </a>
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -36,7 +36,7 @@ export default function CardProduct() {
 
         <div className="flex gap-2 items-center justify-between">
             <ModalWindow productId={1}/>
-            <EditButton />
+            <EditButton /> 
             <DeleteButton />
         </div>
         
